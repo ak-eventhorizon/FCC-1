@@ -2,4 +2,8 @@
 
 ### 1 - Homer Simpson - tribute page
 
+**complete**
+
 ### 2 - Star Wars - survey form
+
+*in progress*
