@@ -301,8 +301,94 @@
 		</div>
 	</div>
 
-	<div class="form-wrapper">
-		
+	<div class="form-container">
+		<h1 id="title">STAR WARS Survey Form</h1>
+		<p id="description"><em>may the force be with you</em></p>
+	
+		<form action="" id="survey-form">
+	
+			<label for="name" id="name-label">NAME:</label>
+			<input type="text" id="name" placeholder="Name" required>
+	
+			<label for="email" id="email-label">EMAIL:</label>
+			<input type="email" id="email" placeholder="g.lucas@lucasfilm.com" required>
+	
+			<label for="number" id="number-label">AGE:</label>
+			<input type="number" id="age" min="0" max="999" placeholder="Age">
+	
+			<label for="dropdown">PLANET:</label>
+			<select id="dropdown">
+				<option value="Planet" selected disabled>Planet</option>
+				<option value="Tatooine">Tatooine</option>
+				<option value="Alderaan">Alderaan</option>
+				<option value="Hoth">Hoth</option>
+				<option value="Bespin">Bespin</option>
+				<option value="Yavin">Yavin</option>
+				<option value="Dagobah">Dagobah</option>
+				<option value="Coruscant">Coruscant</option>
+			</select>
+	
+			<fieldset id="force_side">
+				<legend>FORCE SIDE</legend>
+				<div class="wrapper">
+					<div class="block">
+						<input type="radio" id="jedi" name="force_side" value="jedi">
+						<label for="jedi" id="tag-jedi">Jedi</label>
+					</div>
+					<div class="block">
+						<input type="radio" id="sith" name="force_side" value="sith">
+						<label for="sith" id="tag-sith">Sith</label>
+					</div>
+				</div>
+			</fieldset>
+	
+			<fieldset id="fav_episodes">
+				<legend>FAVORITE EPISODES</legend>
+				<div class="wrapper">
+					<div class="block">
+						<input type="checkbox" id="ep1" name="ep1" value="ep1">
+						<label for="ep1">Episode I</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep2" name="ep2" value="ep2">
+						<label for="ep2">Episode II</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep3" name="ep3" value="ep3">
+						<label for="ep3">Episode III</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep4" name="ep4" value="ep4">
+						<label for="ep4">Episode IV</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep5" name="ep5" value="ep5">
+						<label for="ep5">Episode V</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep6" name="ep6" value="ep6">
+						<label for="ep6">Episode VI</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep7" name="ep7" value="ep7">
+						<label for="ep7">Episode VII</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep8" name="ep8" value="ep8">
+						<label for="ep8">Episode VIII</label>
+					</div>
+					<div class="block">
+						<input type="checkbox" id="ep9" name="ep9" value="ep9">
+						<label for="ep9">Episode IX</label>
+					</div>
+				</div>
+			</fieldset>
+	
+			<textarea id="comment" cols="30" rows="3" placeholder="Comment..."></textarea>
+	
+			<button id="submit">Submit</button>
+	
+		</form>
 	</div>
 
 <script src="script/script.js"></script>
