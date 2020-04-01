@@ -21,14 +21,13 @@ body {
 	background-color: black;
 }
 
+/********** TITLES CONTROLS - BEGIN **********/
 
-/********** SURVEY FORM - BEGIN **********/
-
-.form-wrapper {
-	width: auto;
+.controls-background {
+	width: 100%;
     height: 70vh;
     background-color: #9e9e9e4a;
-    position: relative;
+    position: fixed;
     margin: auto;
     opacity: 0.8;
     z-index: 1;
@@ -37,11 +36,6 @@ body {
     			url(../img/saber_red.png) right top no-repeat;
     background-size: contain;
 }
-
-/********** SURVEY FORM - END **********/
-
-
-/********** TITLES CONTROLS - BEGIN **********/
 
 .controls {
 	display: flex;
@@ -73,7 +67,7 @@ body {
 #sw-title-container {
 	width: 100%;
 	height: 100%;
-	position: absolute;
+	position: fixed;
 	top: 0;
 	left: 0;
 	overflow: hidden;
@@ -137,3 +131,16 @@ body {
 }
 
 /********** STAR WARS TITLES FLOW - END **********/
+
+
+/********** SURVEY FORM - BEGIN **********/
+
+.form-wrapper {
+	width: 75vw;
+	height: 80vh;
+	background-color: grey;
+	margin: auto;
+}
+
+
+/********** SURVEY FORM - END **********/
