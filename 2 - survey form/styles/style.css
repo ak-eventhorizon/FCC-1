@@ -21,6 +21,7 @@ body {
 	background-color: black;
 }
 
+
 /********** TITLES CONTROLS - BEGIN **********/
 
 .controls-background {
@@ -187,7 +188,7 @@ body {
 #survey-form > fieldset,
 #survey-form > textarea,
 #survey-form > button {
-	grid-column: span 2; /* два столбца в ширину */
+	grid-column: span 2; /* two columns width element*/
 	padding-bottom: 5px;
 }
 
@@ -231,14 +232,17 @@ body {
     border-radius: 10px;
     font-size: 1em;
 
-    outline-style: none;    /* сброс браузерных подсветок */
+    outline-style: none;    /* browser highlights reset */
 }
 
 #name:focus, 
 #email:focus, 
-#age:focus, 
-#comment:focus {
+#age:focus {
     background-color: #96969670;
+}
+
+#comment:focus {
+	background-color: #000000b0;;
 }
 
 #comment {
@@ -256,20 +260,92 @@ body {
     background-color: white;
 }
 
+/* radio buttons vertical align */
 #jedi,
 #sith {
     margin-top: -7px;
-    vertical-align: middle; /* вертикалное выравнивание радио-баттонов*/
+    vertical-align: middle;
 }
 
 #tag-jedi {
     font-size: 1.2em;
-    color: #3794aa;
+	color: #3794aa;
+	
+	animation: jedi-glow 1s ease-in-out infinite alternate;
 }
 
 #tag-sith {
     font-size: 1.2em;
-    color: #bb2b0b;
+	color: #bb2b0b;
+	
+	animation: sith-glow 2s ease-in-out infinite alternate;
+}
+
+/* ----------- Glow animations ----------- */
+@keyframes jedi-glow {
+	from {
+	  	text-shadow: 
+	  	0 0 10px rgb(140, 189, 253),
+	  	0 0 20px rgb(140, 189, 253)
+	}
+	to {
+	  	text-shadow: 
+	  	0 0 30px rgb(78, 151, 247),
+	  	0 0 40px rgb(78, 151, 247)
+	}
+  }
+
+  @keyframes sith-glow {
+	from {
+		text-shadow: 
+		0 0 10px rgb(248, 97, 97),
+		0 0 20px rgb(248, 97, 97)
+	  }
+	  to {
+		text-shadow: 
+		0 0 30px rgb(245, 43, 43),
+		0 0 40px rgb(245, 43, 43)
+	  }
+  }
+
+/* ----------- Smartphones ----------- */
+@media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
+	
+	/*hidden pattern "visually-hidden"*/
+	.visually-hidden {
+		position: absolute !important;
+		clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+		clip: rect(1px, 1px, 1px, 1px);
+		padding:0 !important;
+		border:0 !important;
+		height: 1px !important; 
+		width: 1px !important; 
+		overflow: hidden;
+	}
+
+	.form-container {
+		width: 75vw;
+		background-color: #0000005c;
+	}
+
+	#survey-form > input, #survey-form > select {
+		grid-column: span 2;
+		font-size: 1.6em;
+	}
+
+	#age,
+	#dropdown {
+		width: auto;
+	}
+
+	#dropdown {
+		text-align-last: center; /* center select tag content*/
+	}
+
+	#fav_episodes .wrapper {
+		grid-template-rows: repeat(5, 1fr);
+		background-color: #0000007a;
+	}
 }
 
 /********** SURVEY FORM - END **********/
