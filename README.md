@@ -4,6 +4,18 @@
 
 **complete**
 
-### 2 - Star Wars - survey form
+### 2 - Star Wars - survey form page
 
 **complete**
+
+### 3 - Product Landing Page
+
+***ToDo***
+
+### 4 - Technical Documentation Page
+
+***ToDo***
+
+### 5 - Personal Portfolio Page
+
+***ToDo***
