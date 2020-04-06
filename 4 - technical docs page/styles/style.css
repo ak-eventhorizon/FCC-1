@@ -1,3 +1,86 @@
+/* press-start-2p-regular - cyrillic_latin */
+@font-face {
+    font-family: 'Press Start 2P';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/press-start-2p-v8-cyrillic_latin-regular.eot'); /* IE9 Compat Modes */
+    src: local('Press Start 2P Regular'), local('PressStart2P-Regular'),
+         url('../fonts/press-start-2p-v8-cyrillic_latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+         url('../fonts/press-start-2p-v8-cyrillic_latin-regular.woff2') format('woff2'), /* Super Modern Browsers */
+         url('../fonts/press-start-2p-v8-cyrillic_latin-regular.woff') format('woff'), /* Modern Browsers */
+         url('../fonts/press-start-2p-v8-cyrillic_latin-regular.ttf') format('truetype'), /* Safari, Android, iOS */
+         url('../fonts/press-start-2p-v8-cyrillic_latin-regular.svg#PressStart2P') format('svg'); /* Legacy iOS */
+  }
+
+/******************* COLOR SCHEME - BEGIN *******************/
+:root {
+    --pure-black: #000000;
+	--console-green: #07da07;
+}
+/******************* COLOR SCHEME - END *******************/
+
 * {
     margin: 0;
 }
+
+/******************* NAVIGATION - BEGIN *******************/
+#navbar {
+    width: 250px;
+    height: 100vh;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--pure-black);
+    color: var(--console-green);
+
+    font-family: 'Press Start 2P';
+}
+
+#navbar header {
+    line-height: 70px;
+    font-size: 1.6rem;
+    padding-left: 10px;
+    border-bottom: 7px var(--console-green) solid;
+    cursor: default;
+}
+
+#navbar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+#navbar li {
+    line-height: 50px;
+    padding-left: 10px;
+    border-bottom: 1px var(--console-green) solid;
+}
+
+#navbar li:hover {
+    background-color: var(--console-green);
+    color: var(--pure-black);
+}
+
+#navbar a {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+}
+
+#navbar a::before {
+    content: '/';
+}
+
+#navbar a:hover::before {
+    content: 'cd /';
+}
+/******************* NAVIGATION - END *******************/
+
+
+/******************* MAIN CONTENT - BEGIN *******************/
+#main-doc {
+    margin-left: 250px;
+}
+
+/******************* MAIN CONTENT - BEGIN *******************/
