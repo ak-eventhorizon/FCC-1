@@ -139,4 +139,23 @@
     padding: 15px;
     border-radius: 5px;
 }
-/******************* MAIN CONTENT - BEGIN *******************/
+/******************* MAIN CONTENT - END *******************/
+
+
+/******************* BANNER - BEGIN *******************/
+#banner {
+    width: 250px;
+    height: 70px;
+
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    background-color: var(--pure-black);
+    border-bottom: 7px var(--console-green) solid;
+
+    z-index: 2;
+
+    /* display: none; */
+}
+/******************* BANNER - END *******************/
