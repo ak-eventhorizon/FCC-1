@@ -37,13 +37,14 @@
     color: var(--console-green);
 
     font-family: 'Press Start 2P';
+
+    overflow-y: auto; /*allow to scroll menu bar*/
 }
 
 #navbar header {
     line-height: 70px;
     font-size: 2rem;
     padding-left: 10px;
-    border-bottom: 7px var(--console-green) solid;
     cursor: default;
 }
 
@@ -51,6 +52,7 @@
     list-style-type: none;
     padding: 0;
     font-size: 1.4rem;
+    border-top: 7px var(--console-green) solid;
 }
 
 #navbar li {
