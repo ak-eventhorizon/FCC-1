@@ -26,7 +26,7 @@
 
 /******************* NAVIGATION - BEGIN *******************/
 #navbar {
-    width: 250px;
+    width: 300px;
     height: 100vh;
 
     position: fixed;
@@ -43,7 +43,7 @@
 
 #navbar header {
     line-height: 70px;
-    font-size: 2rem;
+    font-size: 1.7rem;
     padding-left: 10px;
     cursor: default;
 }
@@ -51,13 +51,12 @@
 #navbar ul {
     list-style-type: none;
     padding: 0;
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     border-top: 7px var(--console-green) solid;
 }
 
 #navbar li {
     line-height: 50px;
-    padding-left: 10px;
     border-bottom: 1px var(--console-green) solid;
 }
 
@@ -70,6 +69,7 @@
     display: block;
     text-decoration: none;
     color: inherit;
+    padding-left: 10px;
 }
 
 #navbar a::before {
@@ -84,7 +84,7 @@
 
 /******************* MAIN CONTENT - BEGIN *******************/
 #main-doc {
-    margin-left: 250px;
+    margin-left: 300px;
     margin-top: 77px;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.2rem;
@@ -144,12 +144,15 @@
 
 /******************* BANNER - BEGIN *******************/
 #banner {
-    width: 250px;
+    width: 300px;
     height: 70px;
 
     position: fixed;
     top: 0;
     left: 0;
+
+    display: grid;
+    align-items: center;
 
     background-color: var(--pure-black);
     border-bottom: 7px var(--console-green) solid;
@@ -157,5 +160,35 @@
     z-index: 2;
 
     /* display: none; */
+}
+
+#console {
+    width: 1ch; /* 1 character */
+
+    font-size: 1.7rem;
+    font-family: 'Press Start 2P';
+
+    color: var(--console-green);
+    border-right: 10px var(--console-green) solid;
+
+    padding-left: 10px;
+    cursor: default;
+
+    overflow: hidden;
+    white-space: nowrap;
+
+    animation: flashing-cursor 1.5s step-end infinite;
+}
+
+@keyframes flashing-cursor {
+    0%  {
+        border-color: var(--console-green);
+    }
+    50% {
+        border-color: transparent;
+    }
+    100%    {
+        border-color: var(--console-green);
+    }
 }
 /******************* BANNER - END *******************/
