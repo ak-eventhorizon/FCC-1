@@ -1,7 +1,7 @@
 'use strict';
 
 
-// ******************** Add console like banner ********************
+// ******************** Add console-like banner ********************
 let consoleBlock = document.getElementById('console');
 
 

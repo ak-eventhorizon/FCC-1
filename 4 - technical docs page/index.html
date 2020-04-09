@@ -40,9 +40,6 @@
 
 <main id="main-doc">
 
-	<!-- https://www.linux.com/training-tutorials/linux-filesystem-explained/ -->
-	<!-- сделать копирайт в футере-->
-
 	<!-- / -->
 	<!-- bin -->
 	<!-- boot -->
@@ -66,192 +63,194 @@
 
 	<section class="main-section" id="system_root">
 		<header></header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
+		<p>The files on a Linux system are arranged in what is called a hierarchical directory structure. This means that they are organized in a tree-like pattern of directories (called folders in other systems), which may contain files and other directories. The first directory in the file system is called the <strong><em>root directory</em></strong>. The root directory contains files and subdirectories, which contain more files and subdirectories and so on and so on.</p>
 		<ul>
-			<li>Lorem, ipsum.
+			<li>/
 				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
+					<li>bin</li>
+					<li>boot</li>
+					<li>dev</li>
+					<li>...</li>
 				</ul>
 			</li>
-			<li>Lorem, ipsum dolor.</li>
 		</ul>
-		<code>Code example</code>
+		<p>This command will <strong><em>"list"</em></strong> content of root directory:</p>
+		<code>ls /</code>
 	</section>
 
 	<section class="main-section" id="bin">
 		<header>bin</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
+		<p><em>/bin</em> is the directory that contains <em>essential user command binaries</em>, that is, some of the applications and programs you can run. You will find the <em>ls</em> program mentioned above in this directory, as well as other basic tools for making and removing files and directories, moving them around, and so on.</p>
 		<ul>
-			<li>Lorem, ipsum.
+			<li>/bin
 				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
+					<li>bash</li>
+					<li>cat</li>
+					<li>chmod</li>
+					<li>cp</li>
+					<li>date</li>
+					<li>echo</li>
+					<li>grep</li>
+					<li>gunzip</li>
+					<li>gzip</li>
+					<li>hostname</li>
+					<li>kill</li>
+					<li>less</li>
+					<li>ln</li>
+					<li>ls</li>
+					<li>mkdir</li>
+					<li>more</li>
+					<li>mount</li>
+					<li>mv</li>
+					<li>nano</li>
+					<li>open</li>
+					<li>ping</li>
+					<li>ps</li>
+					<li>pwd</li>
+					<li>rm</li>
+					<li>sh</li>
+					<li>su</li>
+					<li>tar</li>
+					<li>touch</li>
+					<li>umount</li>
+					<li>uname</li>
+					<li>zsh</li>
 				</ul>
 			</li>
-			<li>Lorem, ipsum dolor.</li>
 		</ul>
-		<code>Code example</code>
+		<p>There are more bin directories in other parts of the file system tree, but we’ll be talking about those in a minute.</p>
+		<p>This command will <strong><em>"change directory"</em></strong> to <em>/bin:</em></p>
+		<code>cd /bin</code>
 	</section>
 
 	<section class="main-section" id="boot">
 		<header>boot</header>
-		<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quod nobis autem, praesentium voluptatum enim quia error ullam pariatur esse iure aliquam eligendi voluptates blanditiis a?</p>
+		<p>The <em>/boot</em> directory contains files required for starting your system. Do I have to say this? Okay, I’ll say it: <strong>do not touch!</strong> If you mess up one of the files in here, you may not be able to run your Linux and it is a pain to repair. On the other hand, don’t worry too much about destroying your system by accident: you have to have superuser privileges to do that.</p>
 		<ul>
-			<li>Lorem, ipsum dolor.</li>
-			<li>Lorem ipsum dolor sit.</li>
+			<li>AGAIN, DO NOT TOUCH IT!</li>
 		</ul>
-		<code>Code example</code>
+		<p>This command will show you where you are - <strong><em>"print working directory"</em></strong>:</p>
+		<code>pwd</code>
 	</section>
 
 	<section class="main-section" id="dev">
 		<header>dev</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sunt?</p>
-		<ul>
-			<li>Lorem.</li>
-			<li>Lorem ipsum dolor sit.</li>
-		</ul>
-		<code>Code example</code>
+		<p><em>/dev</em> contains <em>device</em> files (included /dev/null). Many of these are generated at boot time or even on the fly. For example, if you plug in a new webcam or a USB pendrive into your machine, a new device entry will automagically pop up here.</p>
+		<p>This command will show you where <strong><em>cd</em></strong> command file is:</p>
+		<code>where cd</code>
 	</section>
 
 	<section class="main-section" id="etc">
 		<header>etc</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sunt?</p>
+		<p><em>/etc</em> is the directory where names start to get confusing. <em>/etc</em> gets its name from the earliest Unixes and it was literally “et cetera” because it was the dumping ground for system files administrators were not sure where else to put.</p>
+		<p>Nowadays, it would be more appropriate to say that <em>etc</em> stands for <strong><em>“everything to configure”</em></strong> as it contains most, if not all system-wide configuration files. For example, the files that contain the name of your system, the users and their passwords, the names of machines on your network and when and where the partitions on your hard disks should be mounted are all in here. Again, if you are new to Linux, it may be best if you don’t touch too much in here until you have a better understanding of how things work.</p>
 		<ul>
-			<li>Lorem.</li>
-			<li>Lorem ipsum dolor sit.</li>
+			<li>/etc
+				<ul>
+					<li>crontab</li>
+					<li>cups</li>
+					<li>fonts</li>
+					<li>fstab</li>
+					<li>host.conf</li>
+					<li>hostname</li>
+					<li>hosts</li>
+					<li>hosts.allow</li>
+					<li>hosts.deny</li>
+					<li>init</li>
+					<li>init.d</li>
+					<li>issue</li>
+					<li>machine-id</li>
+					<li>mtab</li>
+					<li>mtools.conf</li>
+					<li>nanorc</li>
+					<li>networks</li>
+					<li>passwd</li>
+					<li>profile</li>
+					<li>protocols</li>
+					<li>resolv.conf</li>
+					<li>rpc</li>
+					<li>securetty</li>
+					<li>services</li>
+					<li>shells</li>
+					<li>timezone</li>
+				</ul>
+			</li>
 		</ul>
-		<code>Code example</code>
 	</section>
 
 	<section class="main-section" id="home">
 		<header>home</header>
-		<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum, sunt?</p>
-		<ul>
-			<li>Lorem.</li>
-			<li>Lorem ipsum dolor sit.</li>
-		</ul>
-		<code>Code example</code>
+		<p><em>/home</em> is where you will find your users personal directories. In my case, under <em>/home</em> there are two directories: <em>/home/paul</em>, which contains all my stuff; and <em>/home/guest</em>, in case anybody needs to borrow my computer.</p>
+		<p>This command with no options or parameters, will take you back to your own home directory, where things are safe and cosy:</p>
+		<code>cd</code>
 	</section>
 
 	<section class="main-section" id="lib">
 		<header>lib</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
-		<ul>
-			<li>Lorem, ipsum.
-				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
-				</ul>
-			</li>
-			<li>Lorem, ipsum dolor.</li>
-		</ul>
-		<code>Code example</code>
+		<p><em>/lib</em> is where <em>libraries</em> live. Libraries are files containing code that your applications can use. They contain snippets of code that applications use to draw windows on your desktop, control peripherals, or send files to your hard disk.</p>
+		<p>There are more <em>lib</em> directories scattered around the file system, but this one, the one hanging directly off of / is special in that, among other things, it contains the all-important kernel modules. The kernel modules are drivers that make things like your video card, sound card, WiFi, printer, and so on, work.</p>
 	</section>
 
 	<section class="main-section" id="media">
 		<header>media</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
-		<ul>
-			<li>Lorem, ipsum.
-				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
-				</ul>
-			</li>
-			<li>Lorem, ipsum dolor.</li>
-		</ul>
-		<code>Code example</code>
+		<p>The <em>/media</em> directory is where external storage will be automatically mounted when you plug it in and try to access it. As opposed to most of the other items on this list, <em>/media</em> does not hail back to 1970s, mainly because inserting and detecting storage (pendrives, USB hard disks, SD cards, external SSDs, etc) on the fly, while a computer is running, is a relatively new thing.</p>
 	</section>
 
 	<section class="main-section" id="mnt">
 		<header>mnt</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
-		<ul>
-			<li>Lorem, ipsum.
-				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
-				</ul>
-			</li>
-			<li>Lorem, ipsum dolor.</li>
-		</ul>
-		<code>Code example</code>
+		<p>The <em>/mnt</em> directory, however, is a bit of remnant from days gone by. This is where you would manually mount storage devices or partitions. It is not used very often nowadays.</p>
 	</section>
 
 	<section class="main-section" id="opt">
 		<header>opt</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
+		<p>The <em>/opt</em> directory is often where software you compile (that is, you build yourself from source code and do not install from your distribution repositories) sometimes lands. Applications will end up in the <em>/opt/bin</em> directory and libraries in the <em>/opt/lib</em> directory.</p>
+		<p>A slight digression: another place where applications and libraries end up in is <em>/usr/local</em>, when software gets installed here, there will also be <em>/usr/local/bin</em> and <em>/usr/local/lib</em> directories. What determines which software goes where is how the developers have configured the files that control the compilation and installation process.</p>
 		<ul>
-			<li>Lorem, ipsum.
+			<li>/opt
 				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
+					<li>bin</li>
+					<li>lib</li>
 				</ul>
 			</li>
-			<li>Lorem, ipsum dolor.</li>
 		</ul>
-		<code>Code example</code>
 	</section>
 
 	<section class="main-section" id="proc">
 		<header>proc</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
-		<ul>
-			<li>Lorem, ipsum.
-				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
-				</ul>
-			</li>
-			<li>Lorem, ipsum dolor.</li>
-		</ul>
-		<code>Code example</code>
+		<p><em>/proc</em>, like <em>/dev</em> is a virtual directory. It contains information about your computer, such as information about your CPU and the kernel your Linux system is running. As with <em>/dev</em>, the files and directories are generated when your computer starts, or on the fly, as your system is running and things change.</p>
 	</section>
 
 	<section class="main-section" id="root">
 		<header>root</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
-		<ul>
-			<li>Lorem, ipsum.
-				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
-				</ul>
-			</li>
-			<li>Lorem, ipsum dolor.</li>
-		</ul>
-		<code>Code example</code>
+		<p><em>/root</em> is the home directory of the superuser (also known as the “Administrator”) of the system. It is separate from the rest of the users home directories <strong><em>BECAUSE YOU ARE NOT MEANT TO TOUCH IT</em></strong>. Keep your own stuff in you own directories, people.</p>
 	</section>
 
 	<section class="main-section" id="run">
 		<header>run</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
-		<ul>
-			<li>Lorem, ipsum.
-				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
-				</ul>
-			</li>
-			<li>Lorem, ipsum dolor.</li>
-		</ul>
-		<code>Code example</code>
+		<p><em>/run</em> is another new directory. System processes use it to store temporary data for their own nefarious reasons. This is another one of those <strong><em>DO NOT TOUCH</em></strong> folders.</p>
 	</section>
 
 	<section class="main-section" id="sbin">
 		<header>sbin</header>
-		<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptate quibusdam sint voluptatibus incidunt est cumque harum, molestias recusandae eaque quos!</p>
+		<p><em>/sbin</em> is similar to <em>/bin</em>, but it contains applications that only the superuser (hence the initial s) will need. You can use these applications with the <strong><em>sudo</em></strong> command that temporarily concedes you superuser powers on many distributions. <em>/sbin</em> typically contains tools that can install stuff, delete stuff and format stuff. As you can imagine, some of these instructions are lethal if you use them improperly, so handle with care.</p>
 		<ul>
-			<li>Lorem, ipsum.
+			<li>/sbin
 				<ul>
-					<li>Lorem, ipsum.</li>
-					<li>Lorem, ipsum dolor.</li>
+					<li>fdisk</li>
+					<li>fsck</li>
+					<li>getty</li>
+					<li>halt</li>
+					<li>ifconfig</li>
+					<li>init</li>
+					<li>mkfs</li>
+					<li>mkswap</li>
+					<li>reboot</li>
+					<li>route</li>
 				</ul>
 			</li>
-			<li>Lorem, ipsum dolor.</li>
 		</ul>
-		<code>Code example</code>
+		<p>This command with superuser privileges (<strong>S</strong>uper<strong>U</strong>ser<strong>DO</strong>) will restart your computer:</p>
+		<code>sudo reboot</code>
 	</section>
 
 	<section class="main-section" id="usr">
@@ -266,7 +265,8 @@
 			</li>
 			<li>Lorem, ipsum dolor.</li>
 		</ul>
-		<code>Code example</code>
+		<p>This command will take you up one level, getting you one level closer to the <em>/ root directory</em>. If you are in <em>/usr/share/wallpapers</em> and run it, you will move up to <em>/usr/share</em>:</p>
+		<code>cd ..</code>
 	</section>
 
 	<section class="main-section" id="srv">
@@ -328,6 +328,10 @@
 		</ul>
 		<code>Code example</code>
 	</section>
+
+	<footer>
+		<a class="nav-link" href="https://www.linux.com/training-tutorials/" target="_blank">more about...</a>
+	</footer>
 	
 </main>
 
