@@ -194,7 +194,7 @@ footer h3 {
 
 
 
-/* Smartphones ----------- */
+/* ----------- Smartphones ----------- */
 @media only screen and (min-device-width: 320px) and (max-device-width: 425px) {
 	
 	header h1 {
@@ -233,7 +233,7 @@ footer h3 {
 	}
 }
 
-/* Tablets ----------- */
+/* ----------- Tablets ----------- */
 @media only screen and (min-device-width: 426px) and (max-device-width: 768px) {
 	
 	header h1 {

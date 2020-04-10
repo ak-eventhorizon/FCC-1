@@ -14,7 +14,7 @@
 
 ### 4 - Technical Documentation Page
 
-*in progress*
+**complete**
 
 ### 5 - Personal Portfolio Page
 
