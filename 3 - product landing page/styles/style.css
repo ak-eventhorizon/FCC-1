@@ -1,3 +1,79 @@
+/* bushido font */
+@font-face {
+    font-family: 'Bushido';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../fonts/BushidoBold.ttf') format('truetype');
+}
+
+/******************* COLOR SCHEME / VARS - BEGIN *******************/
+:root {
+    --pure-black: #000000;
+    --japan-red: #bc002c;
+
+    --content-width: 1000px;
+}
+/******************* COLOR SCHEME / VARS - END *******************/
+
 * {
     margin: 0;
 }
+
+.container {
+    width: var(--content-width);
+    margin: auto;
+}
+
+/******************* HEADER / NAV - BEGIN *******************/
+#header {
+    min-width: var(--content-width);
+    
+    background: 
+    url(../img/sakura-l.png) left top no-repeat,
+    url(../img/sakura-r.png) right top no-repeat,
+    url(../img/leaves-1.png),
+    url(../img/leaves-2.png) 100px;
+}
+
+#header > .container {
+    display: flex;
+    justify-content: space-around;
+    height: 110px;
+}
+
+#header-img {
+    height: inherit;
+    z-index: -1;
+}
+
+#nav-bar {
+    display: flex;
+    align-items: center;
+}
+
+#nav-bar ul {
+    display: flex;
+    list-style-type: none;
+    padding: 0;
+}
+
+#nav-bar li {
+    margin-left: 20px;
+}
+
+#nav-bar a {
+    display: block;
+    text-decoration: none;
+
+    color: var(--japan-red);
+    font-family: 'Bushido';
+    font-size: 4rem;
+}
+
+/******************* HEADER / NAV - END *******************/
+
+/******************* MAIN - BEGIN *******************/
+/******************* MAIN - END *******************/
+
+/******************* FOOTER - BEGIN *******************/
+/******************* FOOTER - END *******************/
