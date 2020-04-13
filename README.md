@@ -10,7 +10,7 @@
 
 ### 3 - Product Landing Page
 
-***ToDo***
+*in progress*
 
 ### 4 - Technical Documentation Page
 
