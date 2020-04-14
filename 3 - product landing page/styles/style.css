@@ -48,13 +48,14 @@
     min-width: var(--content-width);
     
     background-color: var(--pure-white);
+    box-shadow: 0px 2px 5px 0px var(--shadow-grey);
+
     background: 
     url(../img/sakura-l.png) left top no-repeat,
     url(../img/sakura-r.png) right top no-repeat,
-    url(../img/leaves-1.png),
-    url(../img/leaves-2.png) 100px;
+    url(../img/leaves.png) 0px 0px;
 
-    box-shadow: 0px 2px 5px 0px var(--shadow-grey);
+    animation: failingLeaves 20s linear infinite;
 
     /* position: fixed;
     top: 0;
@@ -96,6 +97,22 @@
     font-size: 3.8rem;
 }
 
+@keyframes failingLeaves {
+    0% {
+        background: 
+        url(../img/sakura-l.png) left top no-repeat,
+        url(../img/sakura-r.png) right top no-repeat,
+        url(../img/leaves.png) 0px 0px;
+    }
+
+    100% {
+        background: 
+        url(../img/sakura-l.png) left top no-repeat,
+        url(../img/sakura-r.png) right top no-repeat,
+        url(../img/leaves.png) -244px 128px;
+    }
+}
+
 /******************* HEADER / NAV - END *******************/
 
 /******************* MAIN - BEGIN *******************/
@@ -105,7 +122,7 @@
 }
 
 #main section {
-    height: 600px; TEMP
+    /* height: 600px;  TEMP */
 }
 
 #main #swords {
@@ -154,8 +171,16 @@
     background-color: var(--pure-white);
 }
 
+#video .container {
+    padding: 50px;
+}
+
 #main #contact {
     background-color: var(--japan-red-trnsp);
+}
+
+#contact .container {
+    padding: 50px;
 }
 /******************* MAIN - END *******************/
 
@@ -163,6 +188,12 @@
 
 #footer {
     min-width: var(--content-width);
+    background-color: var(--pure-white);
+
     box-shadow: 0px -2px 5px 0px var(--shadow-grey);
+}
+
+#footer > .container {
+    height: 110px;
 }
 /******************* FOOTER - END *******************/
