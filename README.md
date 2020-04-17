@@ -8,11 +8,11 @@
 
 **complete**
 
-### 3 - Product Landing Page
+### 3 - Japan Swords - landing page
 
-*in progress*
+**complete**
 
-### 4 - Technical Documentation Page
+### 4 - Linux Catalogs - technical documentation page
 
 **complete**
 
