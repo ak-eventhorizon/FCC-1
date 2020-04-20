@@ -35,9 +35,9 @@
     background-repeat: no-repeat;
 	background-size: contain;
 	
-	animation: 
+	/* animation: 
 	rotate 120s linear infinite,
-	gravity 30s steps(720, end) 1 forwards;
+	gravity 30s steps(720, end) 1 forwards; */
 	/* steps вместо linear - дробление на 720 шагов обеспечивает плавность анимации 
 	720 = 30сек * 24кадра */
 }
