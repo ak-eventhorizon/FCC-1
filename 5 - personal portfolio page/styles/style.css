@@ -27,6 +27,34 @@
 	height: 150vmin;
 	
     position: fixed;
+    bottom: -85vmin;
+    right: -50vmin;
+	z-index: -5;
+}
+
+#bg-blackhole2-layer {
+
+	/* display: none; CODEPEN BLACKHOLE TESTING */
+
+	background-color: transparent;
+    width: 75vmin;
+	height: 75vmin;
+	
+    position: fixed;
+    top: 0vmin;
+    left: 0vmin;
+	z-index: -5;
+}
+
+#bg-bhole-layer {
+
+	display: none; /*PNG BLACKHOLE*/
+
+	background-color: transparent;
+    width: 150vmin;
+	height: 150vmin;
+	
+    position: fixed;
     bottom: -75vmin; /*half of initial height*/
     right: -75vmin; /*half of initial width*/
 	z-index: -5;
@@ -38,6 +66,7 @@
 	/* animation: 
 	rotate 120s linear infinite,
 	gravity 30s steps(720, end) 1 forwards; */
+
 	/* steps вместо linear - дробление на 720 шагов обеспечивает плавность анимации 
 	720 = 30сек * 24кадра */
 }
