@@ -137,13 +137,13 @@ function createBackground(){
     if (screenArea < 786000) {
         // smaller than 1024x768 (mobiles, middle laptops, iPad)
         generateOrdinaryStars(1000);
-        generateGradientStars(40);
-        generateDominantStars(2);
+        generateGradientStars(10);
+        generateDominantStars(1);
         generateBlackHole();
     } else { 
         // bigger than 1024x768 (iPad Pro, big laptops, 4k)
         generateOrdinaryStars(4000);
-        generateGradientStars(160);
+        generateGradientStars(30);
         generateDominantStars(3);
         generateBlackHole();
     }    
