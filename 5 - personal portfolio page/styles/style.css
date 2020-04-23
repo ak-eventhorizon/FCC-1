@@ -198,7 +198,7 @@ main {
 
 #profile-link {
 	display: block;
-	background-image: url('../img/github.svg');
+	background-image: url('../img/icons/github.svg');
 	background-repeat: no-repeat;
 	background-size: contain;
 	width: 25vmin;
@@ -209,17 +209,21 @@ main {
 
 
 
-
-
-
 /****************************** @MEDIA - BEGIN ******************************/
-/*	typical checkpoints - DELETE unused		*/
+/* Extra small old smartphones (phones, <<<--370px and down) */
+@media only screen and (max-width: 370px) {
+	#navbar a {
+		letter-spacing: 0;
+	}
 
-/* Extra small devices (phones, <<<--600px and down) */
-@media only screen and (max-width: 600px) {} 
+	#welcome-section h1 {
+		font-size: 3.1rem;
+	}
 
-/* Small devices (portrait tablets and large phones, 601px-->>> and up) */
-@media only screen and (min-width: 601px) {} 
+	.project-tile p {
+		font-size: 1.8rem;
+	}
+}
 
 /* Medium devices (landscape tablets, 768px-->>> and up) */
 @media only screen and (min-width: 768px) {} 
