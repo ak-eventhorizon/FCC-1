@@ -136,7 +136,8 @@ main {
 #welcome-section h1 {
 	color: var(--pure-white);
     text-shadow: 1px 1px var(--pure-black);
-    white-space: pre;
+	white-space: pre;
+	cursor: default;
     font-family: Protos;
 	font-size: 3.5rem;
 	
