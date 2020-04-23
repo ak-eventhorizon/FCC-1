@@ -1,7 +1,23 @@
+@font-face {
+    font-family: 'Protos';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../fonts/protos.ttf') format('truetype');
+}
+
+@font-face {
+    font-family: 'Starcruiser';
+    font-style: bold;
+    font-weight: 700;
+    src: url('../fonts/starcruiser.ttf') format('truetype');
+}
+
 /****************************** COLOR SCHEME - BEGIN ******************************/
 :root {
 	--pure-black: #000000; 
 	--pure-white: #ffffff;
+	--trnspr-black: #000000aa;
+	--trnspr-white: #ffffffaa;
 
 	--content-min-width: 300px;
 	--content-max-width: 1000px;
@@ -75,7 +91,7 @@ main > section {
 #navbar {
 	position: fixed;
 	top: 0;
-	z-index: 2;
+	z-index: 5;
 
     height: 50px;
     width: 90vw;
@@ -97,9 +113,10 @@ main > section {
 	text-decoration: none;
 	text-shadow: 1px 1px var(--pure-black);
 
-    color: var(--pure-white);
-	font-size: 2rem;
-    /* font-family: 'Bushido'; */
+	color: var(--trnspr-white);
+    font-size: 1.1rem;
+    font-family: Starcruiser;
+    letter-spacing: 1.5px;
 }
 /****************************** HEADER / NAV - END ******************************/
 /****************************** MAIN - BEGIN ******************************/
@@ -108,7 +125,7 @@ main {
 }
 
 #welcome-section {
-	background-color: #d2e6e899;
+	/* background-color: #d2e6e899; */
 	height: calc(100vh - 50px);
 	overflow: hidden;
 
@@ -118,33 +135,60 @@ main {
 
 #welcome-section h1 {
 	color: var(--pure-white);
-	text-shadow: 1px 1px var(--pure-black);
-	white-space: pre;
-	font-size: 3.8rem;
-    padding-top: 15vh;
-    transform: rotate(-25deg);
+    text-shadow: 1px 1px var(--pure-black);
+    white-space: pre;
+    font-family: Protos;
+	font-size: 3.5rem;
+	
+	position: relative;
+    top: 20vh;
+    transform: rotate(-33deg);
 }
 
 #projects {
-	background-color: #00bcd466;
+	/* background-color: #00bcd466; */
 
 	display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 5vw;
+	grid-gap: 5vw;
+	padding-bottom: 50px;
 }
 
 .project-tile {
-	background-color: #ffffff99;
-	height: calc((100vh - 50px - 15vw) / 4); /* 4 на экран с учетом высоты фикс. меню и grid-gap */
+	/* background-color: #ffffff99; */
+	height: calc((100vh - 50px - 5*5vw) / 6); /* 6 шт. на экран с учетом высоты фикс. меню и grid-gap */
+	overflow: hidden;
 }
 
 .project-tile a {
-	display: block;
 	height: inherit;
+
+	display: flex;
+    align-items: center;
+    justify-content: center;
+
+	background-color: var(--trnspr-black);
+	color: var(--pure-white);
+
+    border: 5px solid;
+	border-radius: 10vh;
+	text-decoration: none;
+	
+}
+
+.project-tile img {
+	display: none;
+}
+
+.project-tile p {
+    width: 80%;
+	font-family: Protos;
+    font-size: 2.2rem;
+    text-align: center;
 }
 
 #profile {
-	background-color: #ffe4c499;
+	/* background-color: #ffe4c499; */
 	height: calc(100vh - 50px);
 
 	display: flex;
