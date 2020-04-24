@@ -125,7 +125,6 @@ main {
 }
 
 #welcome-section {
-	/* background-color: #d2e6e899; */
 	height: calc(100vh - 50px);
 	overflow: hidden;
 
@@ -147,34 +146,25 @@ main {
 }
 
 #projects {
-	/* background-color: #00bcd466; */
-
 	display: grid;
     grid-template-columns: 1fr;
 	grid-gap: 5vw;
+	grid-auto-rows: 1fr;
 	padding-bottom: 50px;
 }
 
 .project-tile {
-	/* background-color: #ffffff99; */
-	height: calc((100vh - 50px - 5*5vw) / 6); /* 6 шт. на экран с учетом высоты фикс. меню и grid-gap */
-	overflow: hidden;
-}
-
-.project-tile a {
-	height: inherit;
+	min-height: calc((100vh - 50px - 5*5vw) / 6); /* 6 строк на экран с учетом высоты фикс. меню и grid-gap */
 
 	display: flex;
     align-items: center;
     justify-content: center;
 
-	background-color: var(--trnspr-black);
 	color: var(--pure-white);
-
-    border: 5px solid;
+	background-color: var(--trnspr-black);
+    border: 5px solid var(--pure-white);
 	border-radius: 10vh;
 	text-decoration: none;
-	
 }
 
 .project-tile img {
@@ -182,14 +172,12 @@ main {
 }
 
 .project-tile p {
-    width: 80%;
 	font-family: Protos;
-    font-size: 2.2rem;
-    text-align: center;
+	font-size: 2rem;
+	text-align: center;
 }
 
 #profile {
-	/* background-color: #ffe4c499; */
 	height: calc(100vh - 50px);
 
 	display: flex;
@@ -208,8 +196,6 @@ main {
 }
 /****************************** MAIN - END ******************************/
 
-
-
 /****************************** @MEDIA - BEGIN ******************************/
 /* Extra small old smartphones (phones, <<<--370px and down) */
 @media only screen and (max-width: 370px) {
@@ -222,16 +208,51 @@ main {
 	}
 
 	.project-tile p {
-		font-size: 1.8rem;
+		font-size: 1.6rem;
 	}
 }
 
 /* Medium devices (landscape tablets, 768px-->>> and up) */
-@media only screen and (min-width: 768px) {} 
+@media only screen and (min-width: 768px) {
+	#navbar ul {
+		justify-content: flex-end;
+	}
 
-/* Large devices (laptops/desktops, 992px-->>> and up) */
-@media only screen and (min-width: 992px) {} 
+	#navbar a {
+		font-size: 1.8rem;
+		margin-left: 25px;
+	}
 
-/* Extra large devices (large laptops and desktops, 1200px-->>> and up) */
-@media only screen and (min-width: 1200px) {}
+	#welcome-section h1 {
+		font-size: 7.3rem;
+    	top: 10vh;
+	}
+} 
+
+/* Large devices (laptops/desktops, 1024px-->>> and up) */
+@media only screen and (min-width: 1024px) {
+	#projects {
+    	grid-gap: 1vw;
+	}
+
+	.project-tile {
+		height: calc((100vh - 50px - 3*1vw) / 4);
+		width: 60%;
+		margin: auto;
+		border-radius: 2vh;
+		justify-content: flex-start;
+	}
+
+	.project-tile img {
+		height: 100%;
+    	max-width: 60%;
+		display: block;
+		opacity: 0.8;
+		border-radius: 1vh;
+	}
+
+	.project-tile p {
+		width: 60%;
+	}
+} 
 /****************************** @MEDIA - END ******************************/
