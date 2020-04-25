@@ -175,6 +175,7 @@ main {
 	font-family: Protos;
 	font-size: 2rem;
 	text-align: center;
+	padding: 0 10px;
 }
 
 #profile {
