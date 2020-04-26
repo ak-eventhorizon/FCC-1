@@ -12,7 +12,7 @@ window.requestAnimFrame =
 };
 
 // Global cnvs Setting
-let cnvs = document.getElementById('bg-blackhole2-layer');
+let cnvs = document.getElementById('bg-blackhole-test-layer');
 let context = cnvs.getContext('2d');
 cnvs.width = window.innerWidth;
 cnvs.height = window.innerHeight;

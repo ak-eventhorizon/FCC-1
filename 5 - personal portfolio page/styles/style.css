@@ -73,7 +73,7 @@ main > section {
 	z-index: -5;
 }
 
-#bg-blackhole2-layer {
+#bg-blackhole-test-layer {
 
 	display: none; /* CODEPEN BLACKHOLE TESTING */
 
@@ -126,6 +126,7 @@ main {
 
 #welcome-section {
 	height: calc(100vh - 50px);
+	min-height: 430px;
 	overflow: hidden;
 
 	display: flex;
@@ -180,6 +181,7 @@ main {
 
 #profile {
 	height: calc(100vh - 50px);
+	min-height: 400px;
 
 	display: flex;
     justify-content: flex-end;
@@ -238,10 +240,12 @@ main {
 
 	.project-tile {
 		height: calc((100vh - 50px - 3*1vw) / 4);
+		min-height: 5rem;
+		max-height: 15rem;
 		width: 60%;
 		margin: auto;
+		overflow: hidden;
 		border-radius: 2vh;
-		justify-content: flex-start;
 	}
 
 	.project-tile img {
@@ -253,7 +257,7 @@ main {
 	}
 
 	.project-tile p {
-		width: 60%;
+		margin: auto;
 	}
 } 
 /****************************** @MEDIA - END ******************************/
