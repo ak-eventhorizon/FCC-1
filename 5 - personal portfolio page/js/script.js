@@ -151,4 +151,5 @@ function createBackground(){
 
 
 window.addEventListener('load', createBackground);
-window.addEventListener('resize', createBackground);
+// window.addEventListener('resize', createBackground);
+//disables because mobile Safari dinamic height
